@@ -4,12 +4,18 @@
     padding: 0;
 }
 
+:root {
+    --bg-color: #042104;
+    --loader-color: #00ff0a;
+    --shadow-color: #00ff0a;
+}
+
 section {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #042104;
+    background: var(--bg-color);
     animation: animateBg 10s linear infinite;
 }
 
@@ -45,14 +51,14 @@ section .loader span::before {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: #00ff0a;
+    background: var(--loader-color);
     box-shadow: 
-        0 0 10px #00ff0a,
-        0 0 20px #00ff0a,
-        0 0 40px #00ff0a,
-        0 0 60px #00ff0a,
-        0 0 80px #00ff0a,
-        0 0 100px #00ff0a;
+        0 0 10px var(--shadow-color),
+        0 0 20px var(--shadow-color),
+        0 0 40px var(--shadow-color),
+        0 0 60px var(--shadow-color),
+        0 0 80px var(--shadow-color),
+        0 0 100px var(--shadow-color);
     animation: animate 2s linear infinite;
     animation-delay: calc(0.1s * var(--i));
 }
